@@ -31,4 +31,9 @@ public class PaymentController {
         return new CommonResult<Payment>(200,"查询成功8001",paymentService.getPaymentById(id));
     }
 
+    @GetMapping("/test/lb")
+    public String testLb(){
+        return "8001";
+    }
+
 }

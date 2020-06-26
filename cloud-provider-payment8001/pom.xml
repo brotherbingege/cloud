@@ -45,6 +45,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <!--Eureka Client-->
+        <!--包含了spring-cloud-starter-netflix-ribbon-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

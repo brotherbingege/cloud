@@ -28,5 +28,9 @@ public class PaymentController {
     public CommonResult<Payment> getById(@PathVariable("id")Long id){
         return new CommonResult<Payment>(200,"查询成功8002",paymentService.getPaymentById(id));
     }
+    @GetMapping("/test/lb")
+    public String testLb(){
+        return "8002";
+    }
 
 }

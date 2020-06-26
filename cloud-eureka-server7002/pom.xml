@@ -13,6 +13,7 @@
 
     <dependencies>
         <!--Eureka Server-->
+        <!--包含了spring-cloud-starter-netflix-ribbon-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
