@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.annotation.RequestScope;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * 〈功能概述〉<br>
  *
@@ -35,5 +37,16 @@ public class PaymentController {
     public String testLb(){
         return "8001";
     }
+
+    @GetMapping("/test/openfeign/timeout")
+    public String testOpenFeignTimeOut(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "8001";
+    }
+
 
 }

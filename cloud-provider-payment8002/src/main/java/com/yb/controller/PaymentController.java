@@ -6,6 +6,8 @@ import com.yb.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * 〈功能概述〉<br>
  *
@@ -30,6 +32,15 @@ public class PaymentController {
     }
     @GetMapping("/test/lb")
     public String testLb(){
+        return "8002";
+    }
+    @GetMapping("/test/openfeign/timeout")
+    public String testOpenFeignTimeOut(){
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "8002";
     }
 
