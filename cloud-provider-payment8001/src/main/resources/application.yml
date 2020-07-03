@@ -4,13 +4,18 @@ server:
 spring:
   application:
     name: cloud-payment-service
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://192.168.31.81:3306/cloud2020?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
     username: root
     password: Bin.ye.95@qq.com
+  #sleuth zipkin链路监控
+  zipkin:
+     base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1 # 采样率介于0到1之间，1则表示全部采集，一般是设置0.5
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 public class ApplicationContextConfig {
 
     @Bean
-    //@LoadBalanced //赋予restTemplate 复杂均衡能力   //测试自定义的负载均衡的时候需要注释掉
+    @LoadBalanced //赋予restTemplate 复杂均衡能力   //测试自定义的负载均衡的时候需要注释掉
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
