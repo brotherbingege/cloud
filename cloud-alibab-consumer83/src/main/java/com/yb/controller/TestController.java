@@ -17,12 +17,20 @@ public class TestController {
 
     @Value("${server.url.nacos-provider-service}")
     private String serverUrl;
+
+    private final String SENTINEL_TEST_SERVICE = "http://cloud-alibaba-sentinel-service";
+
     @Autowired
     RestTemplate restTemplate;
 
     @GetMapping("/consumer/hw")
     public String hw(){
         return restTemplate.getForObject(serverUrl+"/hw",String.class);
+    }
+
+    @GetMapping("/consumer/testA")
+    public String testA(){
+        return restTemplate.getForObject(SENTINEL_TEST_SERVICE+"/testA",String.class);
     }
 
 }

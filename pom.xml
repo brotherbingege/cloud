@@ -35,6 +35,10 @@
         <module>cloud-alibab-provider-payment9002</module>
         <module>cloud-alibab-consumer83</module>
         <module>cloud-alibab-config-client3377</module>
+        <module>cloud-alibaba-sentinel8401</module>
+        <module>cloud-alibaba-sentinel-provider9003</module>
+        <module>cloud-alibaba-sentinel-provider9004</module>
+        <module>cloud-alibaba-sentinel-consumer84</module>
     </modules>
 
     <!--统一管理jar包和版本-->

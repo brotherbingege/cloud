@@ -1,0 +1,21 @@
+server:
+  port: 9004
+
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.81 #nacos 注册地址
+#激活sentinel对feign的支持
+feign:
+  sentinel:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

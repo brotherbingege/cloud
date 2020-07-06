@@ -1,11 +1,9 @@
 server:
-  port: 83
-
+  port: 8401
 
 spring:
   application:
-    name: nacos-consumer
-  #nacos 注册中心地址配置
+    name: cloud-alibaba-sentinel-service
   cloud:
     nacos:
       discovery:
@@ -15,6 +13,8 @@ spring:
         dashboard: localhost:8080 #配置Sentinel dashboard地址
         port: 8719 #默认端口8719 如果端口被占用，则依次+1直至找到没被占用的端口
 
-#动态配置Nacos 服务地址名称
-server.url:
-  nacos-provider-service: http://nacos-provider
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
